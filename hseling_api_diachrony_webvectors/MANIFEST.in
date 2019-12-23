@@ -1,0 +1,2 @@
+recursive-include hseling_api_diachrony_webvectors/templates *
+recursive-include hseling_api_diachrony_webvectors/static *
