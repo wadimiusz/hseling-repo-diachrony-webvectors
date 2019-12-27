@@ -1,0 +1,56 @@
+{%- extends "base.html" -%}
+
+{% block title%}
+<title>{{strings['base3']}}: {{ strings['binary1'] }}</title>
+{% endblock title %}
+
+{% block content %}
+<div id="queryform">
+<form id="inputform" action="#" method=post>
+        <div class="checkbox">
+          <p><em>{{strings['pairwise2']}}</em></p>
+          <fieldset>
+            <!-- A cicle for models to work with -->
+            {%- for m in models %}
+            <label>
+            <input type="radio" {% if m == model1 %} checked {% endif %} name="model1" value="{{ m }}">{{ strings[models[m]] }}
+            </label>
+            {%- endfor %}
+          </fieldset>
+        </div>
+
+        <div class="checkbox">
+          <p><em>{{strings['pairwise3']}}</em></p>
+          <fieldset>
+            <!-- A cicle for models to work with -->
+            {%- for m in models %}
+            <label>
+            <input type="radio" {% if m == model2 %} checked {% endif %} name="model2" value="{{ m }}">{{ strings[models[m]] }}
+            </label>
+            {%- endfor %}
+          </fieldset>
+        </div>
+
+            <div class="form-group">
+                <input class="typeahead"  type="text" id="query" name="word" value="{{ word }}" maxlength=100>
+                    {{ strings['binary2'] }}
+            </div>
+        <button type="submit" class="btn btn-primary">{{strings['binary3']}}</button>
+    </form>
+</div>
+
+
+{% if label == "1" %}
+{{ strings['binary5'] }} {{ strings['binary6'] }} {{ proba }}
+{% elif label == "0" %}
+{{ strings['binary4'] }} {{ strings['binary6'] }} {{ proba }}
+{% endif %}
+{% if examples_type == 1 %}
+{% for table in examples %}
+            {{ table|safe }}
+{% endfor %}
+{% elif examples_type == 0 %}
+<p>{{ examples }}</p>
+{% endif %}
+
+{% endblock %}

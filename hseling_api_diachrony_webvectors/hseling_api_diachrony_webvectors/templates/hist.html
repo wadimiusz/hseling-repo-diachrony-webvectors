@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+<title>{{strings['base3']}}: {{ strings['histplot1'] }}</title>
+{% endblock title %}
+
+{% block content %}
+
+{% for model in models_to_neighbors %}
+    <li> {{ model }} </li>
+{% endfor %}
+
+<h1>{{ strings['histplot2'] }}</h1>
+<table>
+    <tr>
+        {% for model in models %}
+        <td>{{ model }}</td>
+        {% endfor %}
+    </tr>
+    {% for neighbors_row in neighbors %}
+    <tr>
+        {% for neighbor in neighbors_row %}
+        <td>
+            {{ neighbor }}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<img src="{{ url }}data/images/plt.png" alt="Chart">
+
+
+
+{% endblock content %}
