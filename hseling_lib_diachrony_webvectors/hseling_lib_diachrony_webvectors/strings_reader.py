@@ -8,17 +8,20 @@ the strings, and lets the main app use it
 
 import sys
 import csv
+import os
 from flask import Markup
 import configparser
 
 config = configparser.RawConfigParser()
-config.read('hseling_api_diachrony_webvectors/hseling_api_diachrony_webvectors/webvectors.cfg')
+path = '../hseling_api_diachrony_webvectors/hseling_api_diachrony_webvectors/webvectors.cfg'
+assert os.path.isfile(path), "Current path: {}".format(os.getcwd())
+config.read(path)
 
 root = config.get('Files and directories', 'root')
 l10nfile = config.get('Files and directories', 'l10n')
 
 # open the strings database:
-csvfile = open(root + l10nfile, 'rU')
+csvfile = open("../hseling_lib_diachrony_webvectors/hseling_lib_diachrony_webvectors/" + l10nfile, 'rU')
 acrobat = csv.reader(csvfile, dialect='excel', delimiter=',')
 
 # initialize a dictionary for each language:
