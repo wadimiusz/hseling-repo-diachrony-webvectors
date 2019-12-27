@@ -2,7 +2,8 @@
 # coding: utf-8
 
 from flask import Flask, url_for, send_from_directory
-from lang_converter import LangConverter
+from hseling_lib_diachrony_webvectors.lang_converter import LangConverter
+
 from webvectors import *
 import configparser
 

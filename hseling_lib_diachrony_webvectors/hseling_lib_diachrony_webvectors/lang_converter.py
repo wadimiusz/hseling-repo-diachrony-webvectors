@@ -2,7 +2,7 @@
 # coding: utf-8
 
 from werkzeug.routing import BaseConverter, ValidationError
-from strings_reader import language_dicts
+from hseling_lib_diachrony_webvectors.hseling_lib_diachrony_webvectors.strings_reader import language_dicts
 
 """
 this module enables delicate control of the URL argument in requests
