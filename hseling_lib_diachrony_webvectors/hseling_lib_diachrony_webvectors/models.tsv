@@ -1,0 +1,11 @@
+identifier	name	path	string	default	tags	algo	size
+2010	Russian News 2010	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2010_rnc_incremental.model	similar2010	True	True	word2vec	17444050
+2011	Russian News 2011	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2011_rnc_incremental.model	similar2011	True	True	word2vec	16639726
+2012	Russian News 2012	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2012_rnc_incremental.model	similar2012	True	True	word2vec	18102635
+2013	Russian News 2013	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2013_rnc_incremental.model	similar2013	True	True	word2vec	17759165
+2014	Russian News 2014	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2014_rnc_incremental.model	similar2014	True	True	word2vec	9095748
+2015	Russian News 2015	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2015_rnc_incremental.model	similar2015	True	True	word2vec	20241296
+2016	Russian News 2016	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2016_rnc_incremental.model	similar2016	True	True	word2vec	16946790
+2017	Russian News 2017	/mnt/data/NewsHistory/micro/models/2017_rnc_incremental.model	similar2017	True	True	word2vec	18262075
+2018	Russian News 2018	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2018_rnc_incremental.model	similar2018	True	True	word2vec	10442011
+2019	Russian News 2019	/mnt/data/NewsHistory/micro/models/aligned_to_2017/2019_rnc_incremental.model	similar2019	True	True	word2vec	10672777
