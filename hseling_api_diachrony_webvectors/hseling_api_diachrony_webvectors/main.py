@@ -7,6 +7,7 @@ from hseling_lib_diachrony_webvectors.lang_converter import LangConverter
 from webvectors import *
 import configparser
 
+
 config = configparser.RawConfigParser()
 config.read('webvectors.cfg')
 url = config.get('Other', 'url')

@@ -12,7 +12,7 @@ from flask import Markup
 import configparser
 
 config = configparser.RawConfigParser()
-config.read('webvectors.cfg')
+config.read('hseling_api_diachrony_webvectors/hseling_api_diachrony_webvectors/webvectors.cfg')
 
 root = config.get('Files and directories', 'root')
 l10nfile = config.get('Files and directories', 'l10n')
